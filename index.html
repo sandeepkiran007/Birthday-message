@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: #f1f1f1;
+      }
+
+      .button-container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      .button {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        background-color: #2ecc71;
+        color: #fff;
+        font-size: 24px;
+        text-align: center;
+        line-height: 200px;
+        cursor: pointer;
+        position: relative;
+        box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.3);
+      }
+
+      .wave {
+        position: absolute;
+        border-radius: 50%;
+        border: 2px solid #2ecc71;
+        animation: wave-animation 2s linear infinite;
+        opacity: 0;
+
+      }
+      /* a {
+          color: white;
+  text-decoration: none;
+  font-size: 35px;
+  font-weight: 900;
+        } */
+
+      @keyframes wave-animation {
+        0% {
+          transform: scale(0);
+          opacity: 0.8;
+        }
+        100% {
+          transform: scale(2);
+          opacity: 0;
+        }
+        h1 {
+          font-size: 30px;
+        }
+
+      }
+    </style>
+  </head>
+  <body>
+    <a href="./birthday.html">
+      <div class="button-container">
+        <div class="button">
+          <h1>Click Me</h1>
+   </div>
+      </div>
+
+          
+    </a>
+
+    <script>
+      window.onload = animateWaves;
+      var audio1 = new Audio("./clickbuttonaudio.mp3");
+      audio1.play(); 
+      
+      setInterval(function () {
+        // Your code here
+        var audio = new Audio("./clickbuttonaudio.mp3");
+      audio.play();  
+    console.log("messsage")    }, 4000);
+
+      function animateWaves() {
+        const button = document.querySelector(".button");
+        const buttonWidth = button.offsetWidth;
+        const buttonHeight = button.offsetHeight;
+
+        for (let i = 0; i < 5; i++) {
+          const wave = document.createElement("div");
+          var wave2 = document.createElement("div");
+          wave.classList.add("wave");
+          wave2.classList.add("wave");
+          wave.style.width = buttonWidth + "px";
+          wave2.style.width = buttonWidth + "px";
+          wave.style.height = buttonHeight + "px";
+          wave2.style.height = buttonHeight + "px";
+          wave.style.top = buttonHeight / 2 - buttonWidth / 2 + "px";
+          wave2.style.top = buttonHeight / 2 - buttonWidth / 2 + "px";
+          wave.style.left = buttonWidth / 2 - buttonHeight / 2 + "px";
+          wave2.style.left = buttonWidth / 2 - buttonHeight / 2 + "px";
+          wave.style.animationDelay = i * 0.4 + "s";
+          wave2.style.animationDelay = i * 0.4 + "s";
+          button.appendChild(wave);
+          button.appendChild(wave2);
+        }
+      }
+    </script>
+  </body>
+</html>

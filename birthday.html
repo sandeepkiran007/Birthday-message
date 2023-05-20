@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Birthday Message</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/9ac4db8b6c.js" crossorigin="anonymous"></script>
+    <style> 
+@keyframes bounce {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-10px);
+  }
+  75% {
+    transform: translateX(10px);
+  }
+}
+
+.bounce {
+  animation: bounce 1s infinite;
+}
+</style>
+</head>
+<body>
+    <!-- Header text -->
+
+    <section>
+
+        <h1 class="bounce">Happy birthday Mummy !</h1>
+    </section>
+
+
+    
+    <!-- Body -->
+    <section class="body">
+        <button class="prev-btn">
+            <!-- right arrow -->
+            <i class="fa-solid fa-circle-arrow-left"></i>
+        </button>
+
+        <div class="book">
+            <!-- Paper 1 -->
+            <div id="p1" class="paper">
+                <div class="front">
+                    <div id="f1" class="front-content">
+                        <img src="./Mom image.png" alt="image of mom">
+
+                    </div>
+                </div>
+                <div class="back">
+                    <div id="b1" class="back-content">
+
+                        <h2>Back 1</h1>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Paper 2 -->
+            <div id="p2" class="paper">
+                <div class="front">
+                    <div id="f2" class="front-content">
+<h2>front 2</h2>
+                    </div>
+                </div>
+                <div class="back">
+                    <div id="b2" class="back-content">
+                        <h2>Back 2</h1>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Paper 3 -->
+            <div id="p3" class="paper">
+                <div class="front">
+                    <div id="f3" class="front-content">
+                        <h2>Front 3</h1>
+
+                    </div>
+                </div>
+                <div class="back">
+                    <div id="b3" class="back-content">
+
+                        <h2>Back 3</h1>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Paper 4 -->
+            <div id="p4" class="paper">
+                <div class="front">
+                    <div id="f4" class="front-content">
+                        <h2>Front 4</h1>
+
+                    </div>
+                </div>
+                <div class="back">
+                    <div id="b4" class="back-content">
+
+                        <h2>Back 4</h1>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Paper 5 -->
+            <div id="p5" class="paper">
+                <div class="front">
+                    <div id="f5" class="front-content">
+                        <h1>Front 5</h1>
+
+                    </div>
+                </div>
+                <div class="back">
+                    <div id="b5" class="back-content">
+
+                        <h1>Back 5</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <button class="nxt-btn">
+            <!-- Left arrow -->
+            <i class="fa-solid fa-circle-arrow-right"></i>
+        </button>
+        
+
+    </section>
+    <!-- Footer -->
+    <section>
+        <footer>
+
+        </footer>
+    </section>
+
+    <audio id="myAudio" src="./HAPPY Birthday Song  Happy Birthday to You (mp3cut.net).mp3" autoplay></audio>
+    <script>
+        document.addEventListener("click", function() {
+            var audio2 = new Audio("./HAPPY Birthday Song  Happy Birthday to You (mp3cut.net).mp3");
+            audio2.play();
+        }, {once: true});
+        window.addEventListener('DOMContentLoaded', (event) => {
+          var audio = document.getElementById('myAudio');
+          audio.play();
+        });
+      </script>
+      
+    <script src="index.js"></script>
+
+</body>
+</html>
